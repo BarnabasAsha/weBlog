@@ -14,6 +14,7 @@ Id consectetur purus ut faucibus. Neque laoreet suspendisse interdum consectetur
         </div>
       </div>
       <div class="add-comment">
+      <span class="error"></span>
       <input type="email" name="" id="email" placeholder="Enter Email">
       <textarea name="" id="comment" cols="30" rows="10" placeholder="Enter Comment"></textarea>
       <button type="submit" @click="addComment">Comment</button>
@@ -51,9 +52,17 @@ export default {
       const emailValue = document.getElementById('email')
       const commentValue = document.getElementById('comment')
       const send = { email: emailValue.value, body: commentValue.value }
-      this.comments.push(send)
-      emailValue.value = ''
-      commentValue.value = ''
+      if (emailValue.value === '' || commentValue.value === '') {
+        document.querySelector('.error').textContent = 'Please fill all fields'
+        setTimeout(() => {
+          document.querySelector('.error').style.display = 'none'
+        }, 2000)
+        return null
+      } else {
+        this.comments.push(send)
+        emailValue.value = ''
+        commentValue.value = ''
+      }
     }
   }
 }
@@ -142,6 +151,11 @@ export default {
     width: 80px;
     margin-top: 0.5em;
     cursor: pointer;
+  }
+
+  .error {
+    align-self: flex-start;
+    color: rgba(255, 0, 0, 0.719);
   }
 
   @media screen and (max-width: 1200px) {
