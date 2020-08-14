@@ -107,7 +107,7 @@ export default {
       width: 100%;
     }
     .post-container {
-      width: 90%;
+      width: 80%;
       height: 100px;
     }
 
