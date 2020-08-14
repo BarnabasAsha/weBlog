@@ -106,17 +106,23 @@ export default {
     .container {
       width: 100%;
     }
+    .post-container {
+      width: 90%;
+      height: 100px;
+    }
 
     .wrapper >
 :nth-child(even) {
   background: url(../assets/mobile-post-img.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .wrapper >
 :nth-child(odd) {
   background: url(../assets/post-img-mobile.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
     .container a {
