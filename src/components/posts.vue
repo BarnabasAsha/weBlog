@@ -107,10 +107,6 @@ export default {
       width: 100%;
     }
 
-    .post-container{
-      width: 300px;
-    }
-
     .wrapper >
 :nth-child(even) {
   background: url(../assets/mobile-post-img.jpg);
