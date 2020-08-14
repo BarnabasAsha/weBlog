@@ -104,17 +104,23 @@ export default {
 }
 @media screen and (max-width: 500px){
     .container {
-      width: 90%;
+      width: 100%;
+    }
+
+    .post-container{
+      width: 300px;
     }
 
     .wrapper >
 :nth-child(even) {
   background: url(../assets/mobile-post-img.jpg);
+  background-repeat: no-repeat;
 }
 
 .wrapper >
 :nth-child(odd) {
   background: url(../assets/post-img-mobile.jpg);
+  background-repeat: no-repeat;
 }
 
     .container a {
